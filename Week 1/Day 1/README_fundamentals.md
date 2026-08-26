@@ -28,7 +28,7 @@ This script covers the absolute foundations of Python with an AI/ML context — 
 python "Week 1/Day 1/fundamentals.py"
 ```
 
-> Requires **Python 3.10+** (uses `match`-compatible type hints). No third-party packages needed — standard library only.
+> Requires **Python 3.10+**. No third-party packages needed — standard library only.
 
 ---
 
@@ -92,18 +92,17 @@ finally:
 
 ---
 
-## 🗂️ Part of the Series
+## 🛠️ Skills Demonstrated
 
-| Day | File | Topic |
-|-----|------|-------|
-| **Day 1** | `fundamentals.py` | Python Fundamentals ← *you are here* |
-| Day 2 | `data_structures.py` | Data Structures & Control Flow |
-| Day 3 | `modules_and_functions.py` | Functions, Modules & Scope |
-| Day 3 | `oop_practice.py` | Object-Oriented Programming |
+`Python` · `Type Systems` · `Error Handling` · `Clean Code` · `AI/ML Tooling Awareness`
 
 ---
 
-## 👤 Author
+## 👤 About Me
 
-**Fatir Faraz** — AI Engineering Intern, Al Aziz Technologies  
-GitHub: [@Fatir002](https://github.com/Fatir002)
+**Fatir Faraz** — Final-year Software Engineering student specializing in AI & Automation Engineering.
+Currently interning at **Al Aziz Technologies** on the AI Engineering track, building hands-on experience across Python, ML pipelines, and AI agent development.
+
+- 🔗 GitHub: [@Fatir002](https://github.com/Fatir002)
+- 💼 LinkedIn: [linkedin.com/in/fatirfaraz](https://linkedin.com/in/fatirfaraz)
+- 🌐 Fiverr: AI Automation & WhatsApp Agent Services
