@@ -1,8 +1,8 @@
-# 📦 Week 1 | Day 2 — Python Data Structures & Control Flow
+# 🐍 Week 1 | Day 1 — Python Fundamentals
 
 > **Internship at Al Aziz Technologies · AI Engineering Track**
 
-A comprehensive hands-on walkthrough of Python's four core data structures and control flow tools, framed around real AI/ML use cases — from storing model metrics in nested dictionaries to filtering datasets with `break` and `continue`.
+This script covers the absolute foundations of Python with an AI/ML context — from variables and data types all the way to error handling and beginner exercises. Every concept is demonstrated with practical, runnable examples.
 
 ---
 
@@ -10,123 +10,99 @@ A comprehensive hands-on walkthrough of Python's four core data structures and c
 
 | # | Topic |
 |---|-------|
-| 1 | Lists — creation, indexing, slicing, mutation, methods |
-| 2 | Tuples — immutability, unpacking, use as fixed records |
-| 3 | Sets — union, intersection, difference, deduplication |
-| 4 | Dictionaries — keys/values, nested dicts, model metrics |
-| 5 | Control Flow — `if/elif/else`, `for`, `while`, `break`, `continue` |
-| 6 | List & Dictionary Comprehensions |
-| 7 | Nested Data Structures — list-of-dicts employee dataset |
+| 1 | Why Python dominates AI development |
+| 2 | Variables and dynamic typing |
+| 3 | Core data types: `int`, `float`, `str`, `bool`, `NoneType` |
+| 4 | Type conversion — explicit (casting) and implicit |
+| 5 | Arithmetic, comparison, logical, and bitwise operators |
+| 6 | String operations and f-strings |
+| 7 | Input / Output and print formatting |
+| 8 | Basic `try` / `except` / `else` / `finally` error handling |
+| 9 | Exercises: Temperature Converter, Simple Interest, FizzBuzz |
 
 ---
 
 ## 🚀 How to Run
 
 ```bash
-python "Week 1/Day 2/data_structures.py"
+python "Week 1/Day 1/fundamentals.py"
 ```
 
-> Requires **Python 3.10+**. No third-party packages — standard library only.
+> Requires **Python 3.10+**. No third-party packages needed — standard library only.
 
 ---
 
 ## 🧩 Script Structure
 
 ```
-data_structures.py
+fundamentals.py
 │
-├── demo_lists()                 # AI frameworks list, scores, slicing, sort
-├── demo_tuples()                # Employee record, immutability, model configs
-├── demo_sets()                  # Week topics, set algebra, deduplication
-├── demo_dictionaries()          # Intern profile, nested model metrics table
-├── demo_control_flow()          # Grade classifier, epoch loop, data filter
-├── demo_comprehensions()        # Squares, evens, normalised, 4×4 table
-└── demo_nested_structures()     # Employee dataset — filter, sort, aggregate
+├── why_python_for_ai()          # 5 reasons Python leads in AI
+├── demo_variables_and_types()   # int, float, str, bool, None
+├── demo_type_conversion()       # str→float→int→str, bool casting
+├── demo_operators()             # arithmetic, comparison, logical, bitwise
+├── demo_strings()               # upper/lower/replace/split/slice/f-strings
+├── demo_input_output()          # formatted print tables (input mocked)
+├── demo_error_handling()        # ValueError, ZeroDivisionError
+└── exercises()                  # 3 beginner practice problems
 ```
 
 ---
 
 ## 💡 Key Concepts Demonstrated
 
-### Lists
+### Dynamic Typing
 ```python
-frameworks = ["NumPy", "Pandas", "PyTorch", "TensorFlow"]
-frameworks.append("LangChain")
-frameworks.sort()
-print(frameworks[2:5])   # slicing
+x = 100          # x is int
+x = "now a str"  # legal — Python rebinds the name
 ```
 
-### Tuples — Immutable Records
+### Type Conversion
 ```python
-employee = (1001, "Fatir Faraz", "AI Engineer", 85_000.0)
-emp_id, name, role, salary = employee   # unpacking
+pi_str   = "3.14159"
+pi_float = float(pi_str)   # → 3.14159
+pi_int   = int(pi_float)   # → 3  (truncates, not rounds)
 ```
 
-### Sets — Deduplication & Algebra
+### F-strings
 ```python
-week1 = {"Python", "NumPy", "Pandas"}
-week2 = {"Pandas", "Scikit-Learn", "NumPy"}
-print(week1 & week2)   # intersection → {'NumPy', 'Pandas'}
-print(week1 | week2)   # union
+name = "Al Aziz Technologies"
+print(f"Welcome to {name}!")
 ```
 
-### Nested Dictionary — Model Metrics
+### Error Handling
 ```python
-model_metrics = {
-    "RandomForest": {"accuracy": 0.92, "f1": 0.91, "roc_auc": 0.96},
-    "SVM":          {"accuracy": 0.89, "f1": 0.88, "roc_auc": 0.93},
-}
-```
-
-### List Comprehension
-```python
-squares    = [n ** 2 for n in range(1, 11)]
-evens      = [n for n in range(1, 11) if n % 2 == 0]
-normalised = [round(n / 10, 2) for n in range(1, 11)]
-```
-
-### Control Flow — Training Loop
-```python
-epoch, loss = 1, 1.0
-while loss > 0.1:
-    loss *= 0.65
-    epoch += 1
-    if epoch > 20:
-        break
+try:
+    result = int("hello")
+except ValueError as exc:
+    print(f"Could not convert: {exc}")
+finally:
+    pass  # cleanup runs regardless
 ```
 
 ---
 
-## 📊 Sample Output Highlights
+## 📝 Exercises
 
-```
-── Model Metrics ──
-Model                  Accuracy     F1  ROC-AUC
----------------------- --------- ------ --------
-LogisticRegression         0.870  0.850    0.910
-RandomForest               0.920  0.910    0.960
-SVM                        0.890  0.880    0.930
-
-── Salary Ranking ──
-1. Ayesha     (AI Research    ) PKR 95,000
-2. Chand      (AI Research    ) PKR 91,000
-3. Ehsan      (Data Science   ) PKR 88,000
-```
+| Exercise | Description |
+|----------|-------------|
+| 1 | Celsius → Fahrenheit converter for `[0, 20, 37, 100]°C` |
+| 2 | Simple interest calculator (`P=10000, R=8%, T=3 years`) |
+| 3 | FizzBuzz from 1 to 20 |
 
 ---
 
-## 🗂️ Part of the Series
+## 🛠️ Skills Demonstrated
 
-| Day | File | Topic |
-|-----|------|-------|
-| Day 1 | `fundamentals.py` | Python Fundamentals |
-| **Day 2** | `data_structures.py` | Data Structures & Control Flow ← *you are here* |
-| Day 3 | `modules_and_functions.py` | Functions, Modules & Scope |
-| Day 3 | `oop_practice.py` | Object-Oriented Programming |
+`Python` · `Type Systems` · `Error Handling` · `Clean Code` · `AI/ML Tooling Awareness`
 
 ---
 
-## 👤 Author
+## 👤 About Me
 
-**Fatir Faraz** — AI Engineering Intern, Al Aziz Technologies  
-GitHub: [@Fatir002](https://github.com/Fatir002)
+**Fatir Faraz** — Final-year Software Engineering student specializing in AI & Automation Engineering.
+Currently interning at **Al Aziz Technologies** on the AI Engineering track, building hands-on experience across Python, ML pipelines, and AI agent development.
+
+- 🔗 GitHub: [@Fatir002](https://github.com/Fatir002)
+- 💼 LinkedIn: [linkedin.com/in/fatirfaraz](https://linkedin.com/in/fatirfaraz)
+- 🌐 Fiverr: AI Automation & WhatsApp Agent Services
